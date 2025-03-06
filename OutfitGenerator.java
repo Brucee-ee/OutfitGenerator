@@ -64,9 +64,9 @@ public class OutfitGenerator extends JFrame
         generateButton = new JButton("Generate");
         generateButton.addActionListener(e -> {
             Random rand = new Random();
-            tshirtLabel.setIcon(new ImageIcon(tshirts[rand.nextInt(tshirts.length)]));
-            trousersLabel.setIcon(new ImageIcon(trousers[rand.nextInt(trousers.length)]));
-            shoesLabel.setIcon(new ImageIcon(shoes[rand.nextInt(shoes.length)]));
+            tshirtLabel.setIcon(new ImageIcon(new ImageIcon(tshirts[rand.nextInt(tshirts.length)]).getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH)));
+            trousersLabel.setIcon(new ImageIcon(new ImageIcon(trousers[rand.nextInt(trousers.length)]).getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH)));
+            shoesLabel.setIcon(new ImageIcon(new ImageIcon(shoes[rand.nextInt(shoes.length)]).getImage().getScaledInstance(150, 100, Image.SCALE_SMOOTH)));
         });
         add(generateButton, BorderLayout.SOUTH);
         setVisible(true);
