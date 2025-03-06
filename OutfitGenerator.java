@@ -55,8 +55,11 @@ public class OutfitGenerator extends JFrame
             tshirtLabel.setIcon(new ImageIcon(tshirts[rand.nextInt(tshirts.length)]));
             trousersLabel.setIcon(new ImageIcon(trousers[rand.nextInt(trousers.length)]));
             shoesLabel.setIcon(new ImageIcon(shoes[rand.nextInt(shoes.length)]));
-        })
-
+        });
+        add(generateButton, BorderLayout.SOUTH);
+        setVisible(true);
     }
-
+    public static void main(String[] args) {
+        new OutfitGenerator();
+    }
 }
