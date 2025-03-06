@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.Random;
 
 public class OutfitGenerator extends JFrame
 {
@@ -46,8 +47,16 @@ public class OutfitGenerator extends JFrame
         tshirtLabel.setHorizontalAlignment(SwingConstants.CENTER);
         trousersLabel.setHorizontalAlignment(SwingConstants.CENTER);
         shoesLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        
+
         //Random Button
+        generateButton = new JButton("Generate");
+        generateButton.addActionListener(e -> {
+            Random rand = new Random();
+            tshirtLabel.setIcon(new ImageIcon(tshirts[rand.nextInt(tshirts.length)]));
+            trousersLabel.setIcon(new ImageIcon(trousers[rand.nextInt(trousers.length)]));
+            shoesLabel.setIcon(new ImageIcon(shoes[rand.nextInt(shoes.length)]));
+        })
+
     }
 
 }
