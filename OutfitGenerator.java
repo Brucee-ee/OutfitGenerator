@@ -27,8 +27,13 @@ public class OutfitGenerator extends JFrame
         add(titleLabel, BorderLayout.NORTH);
 
         //Image Panel
+        imagePanel = new JPanel();
+        //Verticle Layout, Impersonates body
+        imagePanel.setLayout(new BoxLayout(imagePanel, BoxLayout.Y_AXIS));
 
         //Load Images
+        
+
 
         //Add to panel
 
