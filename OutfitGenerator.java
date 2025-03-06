@@ -9,9 +9,21 @@ public class OutfitGenerator extends JFrame
     private JButton generateButton;
     private JLabel tshirtLabel, trousersLabel, shoesLabel;
 
-    private String[] tshirts = {"src/images"};
-    private String[] trousers = {"src/images"};
-    private String[] shoes = {"src/images"};
+    private String[] tshirts =
+            {
+                    "images/tshirt1.png",
+                    "images/tshirt2.png"
+            };
+    private String[] trousers =
+            {
+                    "images/trousers1.png",
+                    "images/trousers2.png"
+            };
+    private String[] shoes =
+            {
+                    "images/shoes1.png",
+                    "images/shoes2.png"
+            };
 
     public OutfitGenerator()
 
