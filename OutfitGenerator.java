@@ -23,7 +23,8 @@ public class OutfitGenerator extends JFrame
 
         //Title
         titleLabel = new JLabel("Luke's Closet", SwingConstants.CENTER);
-        
+        titleLabel.setFont(titleLabel.getFont().deriveFont(20f));
+        add(titleLabel, BorderLayout.NORTH);
 
         //Image Panel
 
