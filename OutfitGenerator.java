@@ -1,2 +1,4 @@
-public class OutfitGenerator {
+import javax.swing.*;
+
+public class OutfitGenerator extends JFrame {
 }
