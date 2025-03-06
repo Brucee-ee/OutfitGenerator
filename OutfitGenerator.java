@@ -22,7 +22,8 @@ public class OutfitGenerator extends JFrame
         setLayout(new BorderLayout());
 
         //Title
-        titleLabel = new JLabel("Luke's Closet");
+        titleLabel = new JLabel("Luke's Closet", SwingConstants.CENTER);
+        
 
         //Image Panel
 
