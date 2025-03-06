@@ -1,8 +1,9 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class OutfitGenerator extends JFrame
 {
-    private JPanel titleLabel;
+    private JLabel titleLabel;
     private JPanel imagePanel;
     private JButton generateButton;
     private JLabel tshirtLabel, trousersLabel, shoesLabel;
@@ -14,7 +15,14 @@ public class OutfitGenerator extends JFrame
     public OutfitGenerator()
 
     {
+        //Main Configurations
+        setTitle("OutfitGenerator");
+        setSize(800, 600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new BorderLayout());
+
         //Title
+        titleLabel = new JLabel("Luke's Closet");
 
         //Image Panel
 
