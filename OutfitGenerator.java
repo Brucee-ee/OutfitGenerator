@@ -41,9 +41,12 @@ public class OutfitGenerator extends JFrame
         imagePanel.add(trousersLabel);
         imagePanel.add(shoesLabel);
         add(imagePanel, BorderLayout.CENTER);
-        
-        //Align maybe
 
+        //Align maybe
+        tshirtLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        trousersLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        shoesLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        
         //Random Button
     }
 
