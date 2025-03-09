@@ -28,5 +28,7 @@ Example:
 private String[] tshirts = {
     "images/tshirt1.png",
     "images/tshirt2.png",
-    "images/tshirt3.png" // Add more here
+    "images/tshirt3.png"
 };
+
+- Add to the above for customisation 
