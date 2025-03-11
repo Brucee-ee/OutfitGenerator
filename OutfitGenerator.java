@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
+import com.formdev.flatlaf.FlatLightLaf;
 
 public class OutfitGenerator extends JFrame
 {
@@ -28,27 +29,38 @@ public class OutfitGenerator extends JFrame
     public OutfitGenerator()
 
     {
+        //FlatL New design maybe
+        try
+        {
+            UIManager.setLookAndFeel(new FlatLightLaf());
+        }
+        catch (Exception ex)
+        {
+            ex.printStackTrace();
+            System.err.println("Failed to set look and feel.");
+        }
+
         //Main Configurations
         setTitle("OutfitGenerator");
         setSize(300, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
+        getContentPane().setBackground(new Color(240, 240, 240));
 
         //Title
         titleLabel = new JLabel("Luke's Closet", SwingConstants.CENTER);
-        titleLabel.setFont(titleLabel.getFont().deriveFont(20f));
+        titleLabel.setFont(new Font("Segoe UI", Font.BOLD, 24));
+        titleLabel.setBorder(BorderFactory.createEmptyBorder(20, 0, 20, 0));
         add(titleLabel, BorderLayout.NORTH);
 
         //Image Panel
         imagePanel = new JPanel();
-        //Verticle Layout, Impersonates body
         imagePanel.setLayout(new BoxLayout(imagePanel, BoxLayout.Y_AXIS));
 
         //Load Images
-        tshirtLabel = new JLabel((new ImageIcon(new ImageIcon(tshirts[0]).getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH))));
-        trousersLabel = new JLabel((new ImageIcon(new ImageIcon(trousers[0]).getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH))));
-        shoesLabel = new JLabel((new ImageIcon(new ImageIcon(shoes[0]).getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH))));
-
+        tshirtLabel = new JLabel(new ImageIcon(new ImageIcon(tshirts[0]).getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH)));
+        trousersLabel = new JLabel(new ImageIcon(new ImageIcon(trousers[0]).getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH)));
+        shoesLabel = new JLabel(new ImageIcon(new ImageIcon(shoes[0]).getImage().getScaledInstance(150, 100, Image.SCALE_SMOOTH)));
         //Add to panel
         imagePanel.add(tshirtLabel);
         imagePanel.add(trousersLabel);
