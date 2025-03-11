@@ -61,9 +61,12 @@ public class OutfitGenerator extends JFrame
         tshirtLabel = new JLabel(new ImageIcon(new ImageIcon(tshirts[0]).getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH)));
         trousersLabel = new JLabel(new ImageIcon(new ImageIcon(trousers[0]).getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH)));
         shoesLabel = new JLabel(new ImageIcon(new ImageIcon(shoes[0]).getImage().getScaledInstance(150, 100, Image.SCALE_SMOOTH)));
+
         //Add to panel
         imagePanel.add(tshirtLabel);
+        imagePanel.add(Box.createRigidArea(new Dimension(0, 10))); // Add spacing
         imagePanel.add(trousersLabel);
+        imagePanel.add(Box.createRigidArea(new Dimension(0, 10))); // Add spacing
         imagePanel.add(shoesLabel);
         add(imagePanel, BorderLayout.CENTER);
 
