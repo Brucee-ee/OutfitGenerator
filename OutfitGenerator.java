@@ -42,7 +42,7 @@ public class OutfitGenerator extends JFrame
 
         //Main Configurations
         setTitle("OutfitGenerator");
-        setSize(300, 500);
+        setSize(300, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
         getContentPane().setBackground(new Color(240, 240, 240));
