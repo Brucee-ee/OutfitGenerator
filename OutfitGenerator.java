@@ -76,7 +76,13 @@ public class OutfitGenerator extends JFrame
         shoesLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         //Random Button
-        generateButton = new JButton("Generate");
+        generateButton = new JButton("Generate Outfit"); //Top Text
+        generateButton.setFont(new Font("Segoe UI", Font.BOLD, 14));//Font and size
+        generateButton.setBackground(new Color(0, 120, 215)); //Blue background
+        generateButton.setForeground(Color.white);//White text
+        generateButton.setFocusPainted(false);
+        generateButton.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
+        generateButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         generateButton.addActionListener(e -> {
             Random rand = new Random();
             tshirtLabel.setIcon(new ImageIcon(new ImageIcon(tshirts[rand.nextInt(tshirts.length)]).getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH)));
@@ -86,7 +92,8 @@ public class OutfitGenerator extends JFrame
         add(generateButton, BorderLayout.SOUTH);
         setVisible(true);
     }
-    public static void main(String[] args) {
-        new OutfitGenerator();
+    public static void main(String[] args)
+    {
+        SwingUtilities.invokeLater(() -> new OutfitGenerator().setVisible(true));
     }
 }
